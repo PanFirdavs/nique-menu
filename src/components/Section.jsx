@@ -1,9 +1,19 @@
-import React from 'react'
+import Card from "./Card";
 
-const Section = () => {
-  return (
-    <div>Section</div>
-  )
-}
+const Section = ({ title, items, id }) => {
 
-export default Section
+	console.log(title, items);
+
+	return (
+		<section className="section" id={id}>
+			<h2 className="section-title">{title}</h2>
+			<ul className="section-list">
+				{items.map((item, index) => {
+					return <Card key={index} data={item} />;
+				})}
+			</ul>
+		</section>
+	);
+};
+
+export default Section;

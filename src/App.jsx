@@ -1,9 +1,19 @@
-import React from 'react'
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Main from './components/Main';
+import data from './data/data.json'
 
-const App = () => {
-  return (
-    <div>App</div>
-  )
+function App() {
+
+
+
+	return (
+		<>
+            <Header />
+            <Main data={data} />
+            <Footer />
+		</>
+	);
 }
 
-export default App
+export default App;
